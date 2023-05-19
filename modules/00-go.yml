@@ -1,0 +1,6 @@
+name: go
+type: apt
+source:
+  packages:
+  - golang-go
+  

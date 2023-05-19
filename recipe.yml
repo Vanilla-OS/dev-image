@@ -1,0 +1,26 @@
+base: registry.vanillaos.org/vanillaos/pico:main
+name: Vanilla Dev
+singlelayer: false
+labels:
+  maintainer: Vanilla OS Contributors
+args:
+  DEBIAN_FRONTEND: noninteractive
+runs:
+- echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/01norecommends
+
+modules:
+- name: packages-modules
+  type: gen-modules
+  path: modules
+
+- name: cleanup
+  type: shell
+  commands:
+  - apt autoremove -y
+  - apt clean
+  - rm -rf /var/cache/*
+  - rm -rf /tmp/*
+  - rm -rf /var/tmp/*
+  - rm -rf /sources
+  - mkdir -p /var/cache/apt/archives/partial
+

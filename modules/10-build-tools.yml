@@ -1,0 +1,10 @@
+name: build-tools
+type: apt
+source:
+  packages:
+  - meson
+  - build-essential
+  - ninja-build
+  - cmake
+  - clang
+  - clang-format

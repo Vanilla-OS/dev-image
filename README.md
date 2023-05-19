@@ -1,8 +1,7 @@
-# Vanilla OS Core Image
-Containerfile for building a vanilla OS Core image.
+# Vanilla OS Dev Image
+Containerfile for building a vanilla OS Development Kit image.
 
-> This image is not intended to be used directly. It is used as a base image for other images.
-> Like the Vanilla OS Desktop or the KDE Edition.
+> This image is meant to be used for development purposes only.
 
 ## Build
 
@@ -10,6 +9,6 @@ You need the [Vib](https://github.com/vanilla-os/Vib) tool to generate the Conta
 
 ```bash
 vib build recipe.yml
-podman image build -t vanillaos/core .
+podman image build -t vanillaos/dev .
 ```
 
