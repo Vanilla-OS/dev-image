@@ -4,6 +4,7 @@ source:
   packages:
   - meson
   - build-essential
+  - git
   - ninja-build
   - cmake
   - clang
