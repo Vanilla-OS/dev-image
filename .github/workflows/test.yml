@@ -19,4 +19,4 @@ jobs:
         ./vib build recipe.yml
 
     - name: Build the Docker image
-      run: docker image build -f Containerfile
+      run: docker image build -f Containerfile .
