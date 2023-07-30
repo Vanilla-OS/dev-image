@@ -24,7 +24,7 @@ jobs:
         ./vib build recipe.yml
 
     - name: Build the Docker image
-      run: docker image build -f Containerfile --tag vso:${{ github.ref_name }} .
+      run: docker image build -f Containerfile --tag dev:${{ github.ref_name }} .
 
     # Push the image to GHCR (Image Registry)
     - name: Push To GHCR
