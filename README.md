@@ -1,5 +1,6 @@
 # Vanilla OS Dev Image
-Containerfile for building a vanilla OS Development Kit image.
+
+Containerfile for building a Vanilla OS Development Kit Image.
 
 > This image is meant to be used for development purposes only.
 
@@ -11,4 +12,3 @@ You need the [Vib](https://github.com/vanilla-os/Vib) tool to generate the Conta
 vib build recipe.yml
 podman image build -t vanillaos/dev .
 ```
-
