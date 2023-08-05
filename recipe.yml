@@ -12,10 +12,10 @@ runs:
   type: includes
   includes:
     - modules/00-go.yml
-    - modules/01-python.yml
-    - modules/02-rust.yml
-    - modules/10-build-tools.yml
-    - modules/20-gtk.yml
+    - modules/10-python.yml
+    - modules/20-build-tools.yml
+    - modules/30-gtk.yml
+    - modules/40-rust.yml
 
 - name: cleanup
   type: shell
