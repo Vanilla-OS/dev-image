@@ -10,8 +10,13 @@ runs:
 
 modules:
 - name: packages-modules
-  type: gen-modules
-  path: modules
+  type: includes
+  includes:
+    - modules/00-go.yml
+    - modules/01-python.yml
+    - modules/02-rust.yml
+    - modules/10-build-tools.yml
+    - modules/20-gtk.yml
 
 - name: cleanup
   type: shell
