@@ -2,7 +2,7 @@
 
 Containerfile for building a Vanilla OS Development Kit Image.
 
-> This image is meant to be used for development purposes only.
+> This image is meant to be used for development purposes only
 
 ## Build
 
