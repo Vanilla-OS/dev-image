@@ -8,7 +8,6 @@ args:
 runs:
 - echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/01norecommends
 
-modules:
 - name: packages-modules
   type: includes
   includes:
