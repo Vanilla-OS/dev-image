@@ -5,6 +5,7 @@ source:
   - meson
   - build-essential
   - git
+  - ssh
   - ninja-build
   - cmake
   - clang
