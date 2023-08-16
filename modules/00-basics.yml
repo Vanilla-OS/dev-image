@@ -1,0 +1,7 @@
+name: basics
+type: apt
+source:
+  packages:
+  - curl
+  - git
+  - ssh

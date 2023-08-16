@@ -12,7 +12,8 @@ modules:
 - name: packages-modules
   type: includes
   includes:
-    - modules/00-go
+    - modules/00-basics
+    - modules/05-go
     - modules/10-python
     - modules/20-build-tools
     - modules/30-gtk
