@@ -10,3 +10,5 @@ source:
   - cmake
   - clang
   - clang-format
+  - devscripts
+  - debhelper
