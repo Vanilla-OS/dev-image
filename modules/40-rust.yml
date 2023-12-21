@@ -1,4 +1,5 @@
 name: rust
-type: shell
-commands:
-- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+type: apt
+source:
+  packages:
+  - rust-all
