@@ -1,0 +1,9 @@
+name: apx-gui-deps
+type: apt
+source:
+  packages:
+  - appstream-util
+  - desktop-file-utils
+  - libgtk-4-bin
+  - libvte-2.91-gtk4-dev
+  - python3-gi

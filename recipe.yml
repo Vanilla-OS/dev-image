@@ -18,6 +18,7 @@ modules:
     - modules/20-build-tools
     - modules/30-gtk
     - modules/40-rust
+    - modules/100-apx-gui-deps
 
 - name: host-spawn
   type: shell
