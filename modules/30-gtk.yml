@@ -8,3 +8,6 @@ source:
   - libgweather-4-dev
   - libjpeg-dev
   - blueprint-compiler
+  - libnm-dev
+  - libnma-dev
+  - libnma-gtk4-dev
