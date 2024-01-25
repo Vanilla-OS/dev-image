@@ -7,3 +7,4 @@ source:
   - libgtk-4-bin
   - libvte-2.91-gtk4-dev
   - python3-gi
+  - itstool
