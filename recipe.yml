@@ -13,6 +13,7 @@ modules:
   type: includes
   includes:
     - modules/00-basics
+    - modules/01-vanilla-base-files
     - modules/05-go
     - modules/10-python
     - modules/20-build-tools

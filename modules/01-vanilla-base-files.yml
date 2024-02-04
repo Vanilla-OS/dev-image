@@ -1,0 +1,16 @@
+name: base-files
+type: dpkg-buildpackage
+source:
+  type: git
+  url: https://github.com/Vanilla-OS/base-files.git
+  branch: main
+  commit: latest
+  paths:
+  - base-files
+modules:
+- name: base-files-deps-install
+  type: apt
+  source:
+    packages:
+    - dpkg-dev
+    - build-essential
