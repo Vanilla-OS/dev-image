@@ -1,0 +1,9 @@
+name: abroot-deps
+type: apt
+source:
+  packages:
+  - libbtrfs-dev
+  - libdevmapper-dev
+  - libgpgme-dev
+  - pkg-config build-essential
+  - libdpkg-dev
