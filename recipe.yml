@@ -1,40 +1,43 @@
-base: ghcr.io/vanilla-os/pico:main
 name: Vanilla Dev
-singlelayer: false
-labels:
-  maintainer: Vanilla OS Contributors
-args:
-  DEBIAN_FRONTEND: noninteractive
-runs:
-- echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/01norecommends
+id: vanilla-dev
+stages:
+- id: build
+  base: ghcr.io/vanilla-os/pico:main
+  singlelayer: false
+  labels:
+    maintainer: Vanilla OS Contributors
+  args:
+    DEBIAN_FRONTEND: noninteractive
+  runs:
+  - echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/01norecommends
 
-modules:
-- name: packages-modules
-  type: includes
-  includes:
-    - modules/00-basics
-    - modules/01-vanilla-base-files
-    - modules/05-go
-    - modules/10-python
-    - modules/20-build-tools
-    - modules/30-gtk
-    - modules/40-rust
-    - modules/100-apx-gui-deps
+  modules:
+  - name: packages-modules
+    type: includes
+    includes:
+      - modules/00-basics.yml
+      - modules/01-vanilla-base-files.yml
+      - modules/05-go.yml
+      - modules/10-python.yml
+      - modules/20-build-tools.yml
+      - modules/30-gtk.yml
+      - modules/40-rust.yml
+      - modules/100-apx-gui-deps.yml
 
-- name: host-spawn
-  type: shell
-  commands:
-    - wget https://github.com/1player/host-spawn/releases/download/1.5.0/host-spawn-x86_64
-    - mv host-spawn-x86_64 /usr/bin/host-spawn
-    - chmod +x /usr/bin/host-spawn
+  - name: host-spawn
+    type: shell
+    commands:
+      - wget https://github.com/1player/host-spawn/releases/download/1.5.0/host-spawn-x86_64
+      - mv host-spawn-x86_64 /usr/bin/host-spawn
+      - chmod +x /usr/bin/host-spawn
 
-- name: cleanup
-  type: shell
-  commands:
-  - apt autoremove -y
-  - apt clean
-  - rm -rf /var/cache/*
-  - rm -rf /tmp/*
-  - rm -rf /var/tmp/*
-  - rm -rf /sources
-  - mkdir -p /var/cache/apt/archives/partial
+  - name: cleanup
+    type: shell
+    commands:
+    - apt autoremove -y
+    - apt clean
+    - rm -rf /var/cache/*
+    - rm -rf /tmp/*
+    - rm -rf /var/tmp/*
+    - rm -rf /sources
+    - mkdir -p /var/cache/apt/archives/partial
