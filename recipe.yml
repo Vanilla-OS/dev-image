@@ -1,5 +1,5 @@
 name: Vanilla Dev
-id: vanilla-dev
+id: dev
 stages:
 - id: build
   base: ghcr.io/vanilla-os/pico:main
