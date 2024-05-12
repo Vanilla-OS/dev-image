@@ -27,7 +27,7 @@ stages:
   - name: host-spawn
     type: shell
     commands:
-      - wget https://github.com/1player/host-spawn/releases/download/1.5.0/host-spawn-x86_64
+      - wget https://github.com/1player/host-spawn/releases/download/v1.6.0/host-spawn-x86_64
       - mv host-spawn-x86_64 /usr/bin/host-spawn
       - chmod +x /usr/bin/host-spawn
 
