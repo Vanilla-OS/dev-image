@@ -34,10 +34,15 @@ stages:
   - name: cleanup
     type: shell
     commands:
-    - apt autoremove -y
-    - apt clean
-    - rm -rf /var/cache/*
-    - rm -rf /tmp/*
-    - rm -rf /var/tmp/*
-    - rm -rf /sources
-    - mkdir -p /var/cache/apt/archives/partial
+      - apt autoremove -y
+      - apt clean
+      - rm -rf /var/cache/*
+      - rm -rf /tmp/*
+      - rm -rf /var/tmp/*
+      - rm -rf /sources
+      - mkdir -p /var/cache/apt/archives/partial
+
+  - name: add-manpath-config
+    type: shell
+    commands: 
+      - mv /etc/man-path.config /etc/manpath.config
