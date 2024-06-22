@@ -6,3 +6,4 @@ source:
   - git
   - ssh
   - wget
+  - nano
