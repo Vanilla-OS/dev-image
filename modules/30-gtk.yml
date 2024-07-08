@@ -11,3 +11,4 @@ source:
   - libnm-dev
   - libnma-dev
   - libnma-gtk4-dev
+  - gobject-introspection
