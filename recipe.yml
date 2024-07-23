@@ -24,12 +24,17 @@ stages:
       - modules/30-gtk.yml
       - modules/40-rust.yml
       - modules/100-apx-gui-deps.yml
+      - modules/101-abroot-deps.yml
+      - modules/200-vib.yml
 
   - name: host-spawn
     type: shell
+    source:
+      type: file
+      url: https://github.com/1player/host-spawn/releases/download/v1.6.0/host-spawn-x86_64
+      checksum: 75159f0d3924a0bd6d230c6414d19ad44609b5a16671db6624681c910f9bb4ff
     commands:
-      - wget https://github.com/1player/host-spawn/releases/download/v1.6.0/host-spawn-x86_64
-      - mv host-spawn-x86_64 /usr/bin/host-spawn
+      - cp /sources/host-spawn/host-spawn /usr/bin/host-spawn
       - chmod +x /usr/bin/host-spawn
 
   - name: cleanup

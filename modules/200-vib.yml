@@ -1,0 +1,10 @@
+name: vib
+type: shell
+source:
+  type: file
+  url: https://github.com/Vanilla-OS/Vib/releases/download/v0.7.4/vib
+  checksum: 8f95d449cacedcac7bb38f7cfd422689fa5a800c10580e663dea7384473c767f
+commands:
+  - mkdir -p /usr/bin
+  - cp /sources/vib/vib /usr/bin/vib
+  - chmod +x /usr/bin/vib

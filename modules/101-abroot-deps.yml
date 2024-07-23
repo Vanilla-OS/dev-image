@@ -5,5 +5,5 @@ source:
   - libbtrfs-dev
   - libdevmapper-dev
   - libgpgme-dev
-  - pkg-config build-essential
+  - pkg-config
   - libdpkg-dev
