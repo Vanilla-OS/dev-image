@@ -2,4 +2,4 @@ name: go
 type: apt
 source:
   packages:
-  - golang-go
+  - golang-1.22-go
